@@ -1,0 +1,532 @@
+/*navigation menu*/
+.nav-menu {
+    background-color: #e9bccb;
+    padding: 20px;
+    font-family: "Mulish";
+}
+
+.nav-toggle {
+    display: none; /* Initially hide the hamburger menu */
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links li {
+    margin-right: 10px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+}
+
+/* Media query for phone screen sizes */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block; /* Show the hamburger menu */
+    }
+    
+    .nav-links {
+        display: none; /* Hide the navigation links by default */
+    }
+    
+    .nav-links.active {
+        display: flex; /* Show the navigation links when active */
+        flex-direction: column; /* Stack the links vertically */
+        align-items: center; /* Center the links vertically */
+        background-color: #e9bccb;
+        padding-top: 20px;
+    }
+}
+
+/*hero page stuff*/
+.hero-container {
+    color: #fff;
+    height: 100vh;
+    text-align: center;
+    width: auto;
+    background-size: 100% 100%;
+    
+}
+.blog-welcome {
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    filter:brightness(50%)
+    
+}
+
+
+/* Place text in the middle of the image */
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-family: "Mulish";
+
+}
+.hero-text h1{
+    font-family: "Mulish";
+    font-size:70px;
+}
+
+.generate-prompts{
+    color: rgb(82, 57, 71);
+    background-color: rgb(212, 166, 178);
+    border: none;
+    border-radius: 100px;
+    margin: 5%;
+    font-size: 20px;
+    width: 250px;
+    height:60px;
+    font-family: "Mulish", bold;
+    
+}
+.generate-prompts:hover{
+    background-color: rgb(239, 195, 207);
+    color: rgb(255, 245, 245);
+    transform: scale(1.1);
+}
+
+@media (max-width: 600px)/*phone*/{
+    .hero-text{
+        font-size:30px;
+    }
+    .hero-text h1{
+        font-size: 60px;
+    }
+}
+
+/* Style for the prompts container */
+#prompts-container {
+    margin-top: 100px;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 100px;
+    background-color: rgb(255, 233, 239);
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: solid 10px rgb(225, 177, 195);
+    border-radius: 20px;
+}
+
+/* Style for individual prompts */
+#prompts-container p {
+    font-size: 30px;
+    line-height: 1.5;
+    font-family: "Caveat";
+}
+
+#generate-prompts-btn{
+    color: rgb(88, 50, 72);
+    background-color: rgb(228, 181, 194);
+    border: none;
+    border-radius: 100px;
+    margin: 5%;
+    font-size: 30px;
+    width: 250px;
+    height:60px;
+    margin:  auto; 
+    margin-top: 100px;
+    display: block;
+    font-family: "Mulish";
+}
+
+#generate-prompts-btn:hover{
+    background-color: rgb(239, 195, 207);
+    color: rgb(255, 245, 245);
+    transform: scale(1.1);
+}
+
+.generator-container{
+    height: 800px;
+}
+
+/*journal entry stuff*/
+.journal-title{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 200px;
+    font-family: "Mulish";
+    color: #4c2b39;
+}
+
+@media (max-width: 3000px) and (min-width: 1500px) {
+    .journal-container {
+        display: flex;
+        justify-content: center; /* Center content horizontally */
+        align-items: center; /* Center content vertically */
+    }
+    .journal-textbox {
+        width: 70%; /* Adjust width as needed */
+        height: 800px; /* Adjust height as needed */
+        font-size: 40px; /* Adjust font size as needed */
+        padding: 10px; /* Adjust padding as needed */
+        background-color: #ffe7ef;
+        border: 10px solid #e9bccb; /* Add border for visual clarity */
+        border-radius: 20px;
+        resize: vertical; /* Allow vertical resizing */
+        cursor: default;
+        box-sizing: border-box;
+        margin: 0 auto; /* Center the text box horizontally */
+        font-family: "Caveat";
+    }
+}
+
+@media (max-width: 1500px) {
+    .journal-container {
+        display: flex;
+        justify-content: center; /* Center content horizontally */
+        align-items: center; /* Center content vertically */
+    }
+    .journal-textbox {
+        width: 90%; /* Adjust width for smaller screens */
+        height: 600px; /* Adjust height as needed */
+        margin-top: 50px;
+        font-size: 30px; /* Adjust font size as needed */
+        padding: 10px; /* Adjust padding as needed */
+        background-color: #ffe7ef;
+        border: 10px solid #e9bccb; /* Add border for visual clarity */
+        border-radius: 20px;
+        resize: vertical; /* Allow vertical resizing */
+        cursor: default;
+        margin: 0 auto; /* Center the text box horizontally */
+        font-family: "Caveat";
+    }
+}
+
+/*accordion stuff*/
+.accordion-container {
+    height: 800px;
+    padding: 100px;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 300px;
+    
+}
+.accordion-container h2{
+    font-family: "Mulish";
+    color: #4c2b39;
+}
+.accordion {
+    background-color: rgb(255, 198, 214);
+    color: #4c2b39;
+    cursor: pointer;
+    padding: 50px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-size: 20px;
+}
+
+.accordion:first-of-type {
+    border-radius: 20px 20px 0 0;
+}
+
+.accordion:last-of-type {
+    border-radius: 0 0 20px 20px;
+}
+
+.accordion:last-of-type.active {
+    border-radius: 0 0 0 0;
+}
+
+.active, .accordion:hover {
+    background-color: rgb(243, 184, 202);
+}
+.panel {
+    padding: 0 50px;
+    background-color: rgb(255, 224, 233);
+    color: #4c2b39;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+    text-align: left;
+    font-size: 16px;
+}
+
+.accordion:after {
+    content: '\002B'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #4c2b39;
+    float: right;
+    margin-left: 5px;
+}
+.active:after {
+    content: "\2212"; /* Unicode character for "minus" sign (-) */
+}
+
+/* Media query for phone sizes */
+@media (max-width: 600px) {
+    .accordion-container {
+        height: auto; /* Let the height adjust dynamically */
+        padding: 50px; /* Reduce padding for smaller screens */
+    }
+    
+    .accordion {
+        padding: 30px; /* Adjust padding for smaller screens */
+        font-size: 16px; /* Reduce font size for smaller screens */
+    }
+    
+    .panel {
+        padding: 0 20px; /* Adjust padding for smaller screens */
+        font-size: 14px; /* Reduce font size for smaller screens */
+    }
+}
+
+
+/*content stuff*/
+@media (min-width: 600px) and (max-width: 1500px)/*tablet*/{
+    .content-container {
+      height: 1600px;
+      text-align: center;
+      padding-top: 100px;
+    }
+    .content-text{
+      padding-top: 100px;
+      width: 27rem;
+      font-family: "Caveat";
+      font-size: 20px;
+    }
+    .content-image{
+        height:auto;
+        width: 100%;
+        max-width: 900px;
+        
+    }
+}
+@media (max-width: 600px)/*phone*/{
+    .content-container {
+        height: 1400px;
+        text-align: center;
+        padding-top: 100px;
+    }
+    .content-text{
+        padding-top: 100px;
+        width: 90%; /* Adjust width for smaller screens */
+        margin: 0 auto;
+        font-size: 20px;
+        font-family: "Caveat";
+    }
+    .content-image{
+        height:auto;
+        width: 100%;
+        max-width: 1200px;
+    }
+}
+
+@media (min-width: 1500px) and ( max-width:2225px)/*smaller desktop*/{
+    .content-container {
+        height: 1000px;
+        text-align: center;
+        padding-top: 100px;
+    }
+    .content-text{
+        padding-top: 100px;
+        width: 27rem;
+        font-family: "Caveat";
+        font-size: 20px;
+    }
+    .content-image{
+        height:450px;
+        width: 700px;
+    }
+}
+
+@media (min-width: 2225px) and ( max-width:3000px)/*larger desktop*/{
+    .content-container {
+        height: 1000px;
+        text-align: center;
+        font-family: "Caveat";
+        padding-top: 100px;
+    }
+    .content-text{
+        padding-top: 100px;
+        width: 40rem;
+        font-size: 20px;
+    }
+    .content-image{
+        height:450px;
+        width: 700px;
+    }
+}
+
+.about-me{
+    font-family: "Mulish";
+}
+.content-image{
+    border-radius: 15px;
+}
+
+.content-items li{
+    display:inline-block;
+    margin-left:5%;
+    margin-right: 5%;
+    margin-top: 130px;
+    vertical-align: top;
+    text-align: center;
+}
+ 
+.content-container{
+    color: rgb(123, 66, 81);
+}
+.daily-update{
+    color: rgb(123, 66, 81);
+    background-color: rgb(239, 195, 207);
+    border: none;
+    border-radius: 20px;
+    margin: 5%;
+    font-size: 20px;
+    width: 180px;
+    height:45px;
+    font-family: "Mulish";
+
+}
+.daily-update:hover{
+    background-color: rgb(255, 218, 228);
+    color: rgb(123, 66, 81);
+    transform: scale(1.1);
+}
+
+/*embedded video css*/
+
+.video {
+    display: block;
+    margin: auto;
+    margin-bottom: 100px;
+    margin-top: 50px;
+    border-radius: 30px;
+}
+
+@media (min-width: 1200px){
+    /* Adjust the max-width property to allow the video to scale up on larger screens */
+    .video{
+        margin-bottom: 300px;
+        max-width: 900px; /* Set a larger max-width for larger screens */
+        width: 100%; /* Ensure the video fills its container */
+        height: 500px; /* Let the height adjust automatically based on the aspect ratio */
+    }
+}   
+
+@media (max-width: 768px){
+    /*video formatting*/
+    .video{
+        margin-bottom: 300px;
+        max-width: 500px; /* Set a larger max-width for larger screens */
+        width: 100%; /* Ensure the video fills its container */
+        height: 300px;
+    }
+}
+
+@media (min-width: 768px) and ( max-width:1200px){
+    /*video formatting*/
+    .video{
+        margin-bottom: 300px;
+        max-width: 700px; /* Set a larger max-width for larger screens */
+        width: 100%; /* Ensure the video fills its container */
+        height: 400px;
+    }
+}
+  
+/*footer stuff*/
+@media (min-width: 805px) and (max-width: 1280px)/*tablet*/{
+    .footer-container {
+        background-color: rgb(201, 139, 157);
+        width: 100%;
+        height: 100%; /* Change height to 100% */
+        position: relative;
+        text-align: center;
+        font-family: "Mulish";
+        padding-top: 20px;
+        padding-bottom: 10px;
+        display: flex; /* Use flexbox to align items vertically */
+        flex-direction: column; /* Align items in a column */
+        justify-content: space-between; /* Space-between aligns items to top and bottom */
+    }
+}
+@media (min-width: 1280px) and ( max-width:5000px)/*desktop*/{
+    .footer-container {
+        background-color: rgb(201, 139, 157);
+        width: 100%;
+        height: 100%; /* Change height to 100% */
+        position: relative;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        font-family: "Mulish";
+        display: flex; /* Use flexbox to align items vertically */
+        flex-direction: column; /* Align items in a column */
+        justify-content: space-between; /* Space-between aligns items to top and bottom */
+    }
+}
+@media (min-width: 50px) and (max-width: 805px)/*phone*/{
+    .footer-container {
+        background-color: rgb(201, 139, 157);
+        width: 100%;
+        height: 100%; /* Change height to 100% */
+        position: relative;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        font-family: "Mulish";
+        display: flex; /* Use flexbox to align items vertically */
+        flex-direction: column; /* Align items in a column */
+        justify-content: space-between; /* Space-between aligns items to top and bottom */
+    }
+}
+footer li{
+    display: inline-block;
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    vertical-align:top;
+    padding-top: 50px;
+    color: rgb(89, 37, 50);
+}
+.footer-header{
+    font-size: 30px;
+}
+a:link {
+    color: rgb(54, 125, 187);
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: rgb(39, 154, 255);
+    background-color: transparent;
+    text-decoration: underline;
+}
+.copyright {
+    width: 90%;
+    margin: auto;
+    padding-top: 100px;
+    padding-bottom: 20px; 
+    font-size: 12px; 
+    text-align: center; 
+    color: rgb(89, 37, 50);
+}

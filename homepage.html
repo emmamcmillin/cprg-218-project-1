@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="styles/project_one.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+        
+        <title>My Blog</title>
+    </head>
+    <body>
+    
+        <section class="hero-container">
+
+            <div class="nav-menu">
+                <div class="nav-toggle" onclick="toggleNav()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="writingprompts.html">Generator</a></li>
+                    <li><a href="dailyupdate.html">Daily Updates</a></li>
+                </ul> 
+            </div>
+
+            <div class="hero-image" >
+                <img class="blog-welcome" src="assets/writing_desk.jpg" alt="white desk with journal and assorted stationery clutter">
+                <div class="hero-text">
+                    <h1>Welcome To My Blog</h1>
+                    <p>For Creative Writing Tips And Tricks</p>
+                    <script>
+                        function redirectToPage() {
+                            window.location.href = "writingprompts.html";
+                        }
+                    </script>
+                    <button class="generate-prompts" onclick="redirectToPage()">Generate Prompts</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-container">
+            <!-- Remove and add content HTML -->
+            <div>
+              <ul class="content-items">
+                <li class="content-text">
+                  <h1 class="about-me">About Me</h1>
+                  <p>Hey there! I'm Emma, a passionate creative spirit with a love for storytelling, fantasy worlds, and the magic of art. Writing has been my sanctuary since I first picked up a pen, allowing me to weave tales of adventure, mystery, and imagination. When I'm not lost in the realms of my own creation, you can find me immersed in the pages of fantasy books, exploring enchanted lands and mythical creatures. Art is another avenue through which I express myself, whether it's sketching whimsical characters or painting vibrant landscapes. Join me on this journey of exploration and wonder as we delve into the limitless possibilities of creativity together!
+                  </p>
+                  <script>
+                    function showAlert2() {
+                      alert ("https://www.youtube.com/watch?v=S7TUe5w6RHo&t");
+                    }
+                  </script>
+                  <button class="daily-update" onclick="window.location.href = 'dailyupdate.html'">Daily Updates</button>
+                </li>
+                <li>
+                  <img class="content-image" src="assets/pencil_shavings.jpg" alt="coloured pencil shavings on white paper">
+                </li>
+              </ul>
+            </div>
+        </section>
+
+        <section class="video-container">
+            <iframe class="video"
+                src="https://www.youtube.com/embed/X0rspL23tqw" alt="☀️ fantasy worldbuilding 101 - pt. 1: the absolute basics. By Lynn d. Jung">
+            </iframe>
+        </section>
+
+        <section class="footer-container">
+            <footer>
+                <ul class="footer-items">
+                  <li>
+                        <h2 class="footer-header">Information</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur
+                        <br>adipiscing elit. Sed posuere nibh sit amet
+                        <br> feugiat porta. Pellentesque vel ornare
+                        <br> purus, eu mollis sapien. Curabitur rutrum
+                        <br> eget ante in mattis. Nullam non fermentum
+                        <br> metus. Proin erat eros, semper ut neque
+                        <br> a, tristique vestibulum nunc.
+                        </p>
+                  </li>
+                  <li>
+                        <h2 class="footer-header">Links</h2>
+                        <p><a href="mailto:hege@example.com">Privacy Policy</a></p>
+                        <p><a href="mailto:hege@example.com">Terms of use</a></p>
+                        <p><a href="mailto:hege@example.com">Accessibility</a></p>
+                  </li>
+                  
+                  <p class="copyright">Copyright &copy; <script>document.write(new Date().getFullYear())</script>, Southern Alberta Institute of Technology</p>
+                </ul>
+            </footer>
+        </section>
+
+        <script src="script.js" defer></script>
+    </body>
+</html>

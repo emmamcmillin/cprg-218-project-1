@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="styles/project_one.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+        
+        <title>Daily Updates</title>
+    </head>
+    <body>
+        <div class="nav-menu">
+            <div class="nav-toggle" onclick="toggleNav()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="writingprompts.html">Generator</a></li>
+                <li><a href="dailyupdate.html">Daily Updates</a></li>
+            </ul> 
+        </div>
+
+        <h1 class="journal-title">Daily Journal Entry</h1>
+        <section class="journal-container">
+            <textarea class="journal-textbox" rows="5" readonly>Hello fellow writers, Today's been a rollercoaster with my creative writing project. Sitting down to write feels like stepping into a wild adventure, it's exhilarating yet nerve-wracking at the same time. My characters are buzzing around in my head, begging to be brought to life on the page, but they're playing hard to get.It's not that I'm short on ideas; it's more like I've got too many of them. Every plot twist and character arc is pulling me in a different direction, and I'm stuck in the middle, trying to figure out which way to go. Should I stick to the tried and true, or should I throw caution to the wind and dive into uncharted waters? In the midst of all this chaos, doubt and determination are duking it out inside me. The words that used to flow like a river now feel more like trying to catch smoke with my bare hands. But even when things seem tough, there's a tiny voice inside me that refuses to give up. So, I keep on writing. Each word is a step closer to unraveling the mysteries of my story, to giving my characters the voices they deserve. Sure, the road ahead might be bumpy, but I'm not giving up. After all, every adventure worth having has its fair share of twists and turns. Here's to chasing dreams and making magic happen.</textarea>
+        </section>
+
+        <section class="accordion-container">
+           
+            <div>
+                <h2>Top 5 Questions Of The Week</h2>
+                <button class="accordion">"How do I overcome writer's block?"- Jane Doe</button>
+                <div class="panel">
+                  <p>Writer's block can be tough, but remember, it's just a temporary bump in the road! Take a step back, breathe, and know that every writer—from beginners to seasoned pros—faces it at some point. Instead of seeing it as a barrier, think of it as an opportunity to explore new ideas or take a well-deserved break. You've got this!</p>
+                </div>
+          
+                <button class="accordion">"How do I improve my writing skills?"- John Doe</button>
+                <div class="panel">
+                  <p>Improving your writing skills is a journey, not a race! Celebrate every step forward, whether it's mastering a new technique or finding your voice in a sea of words. Dive into books that inspire you, and don't be afraid to experiment with different styles and genres. Remember, every word you write is a victory—it's all about progress, not perfection!</p>
+                </div>
+          
+                <button class="accordion">"What should I do if I receive negative feedback on my writing?"- Kane Doe</button>
+                <div class="panel">
+                  <p>Negative feedback can feel disheartening, but don't let it dim your creative spark! Instead of dwelling on it, use it as fuel to ignite your passion for improvement. Embrace constructive criticism as a stepping stone toward growth, and remember that every great writer faced rejection along the way. Your journey is unique, and every setback is a chance to shine even brighter!</p>
+                </div>
+                
+                <button class="accordion">"How do I stay motivated to write?"- Blaine Doe</button>
+                <div class="panel">
+                  <p>Staying motivated is all about finding what lights a fire in your soul! Whether it's a daily writing ritual, a supportive community, or simply a love for storytelling, hold onto what fuels your passion. And when the going gets tough, remember why you started writing in the first place. Your voice matters, and the world is waiting to hear your story—so keep pushing forward!</p>
+                </div>
+
+                <button class="accordion">"How do I find my unique writing voice?"- Raine Doe</button>
+                <div class="panel">
+                  <p>Your voice is like a fingerprint—distinctive, authentic, and entirely yours! Don't be afraid to let it shine through in your writing. Embrace your quirks, passions, and life experiences, and infuse them into every word you write. Remember, there's no one-size-fits-all approach to finding your voice—it's a journey of self-discovery, and every word you pen brings you one step closer to unleashing your true creative potential!</p>
+                </div>
+
+                <script>
+                  var acc = document.getElementsByClassName("accordion");
+                  var i;
+                  
+                  for (i = 0; i < acc.length; i++) {
+                    acc[i].addEventListener("click", function() {
+                      this.classList.toggle("active");
+                      var panel = this.nextElementSibling;
+                      if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                      } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                      }
+                    });
+                  }
+                </script>
+            </div>
+
+        </section>
+
+        <section class="footer-container">
+            <footer>
+                <ul class="footer-items">
+                  <li>
+                        <h2 class="footer-header">Information</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur
+                        <br>adipiscing elit. Sed posuere nibh sit amet
+                        <br> feugiat porta. Pellentesque vel ornare
+                        <br> purus, eu mollis sapien. Curabitur rutrum
+                        <br> eget ante in mattis. Nullam non fermentum
+                        <br> metus. Proin erat eros, semper ut neque
+                        <br> a, tristique vestibulum nunc.
+                        </p>
+                  </li>
+                  <li>
+                        <h2 class="footer-header">Links</h2>
+                        <p><a href="mailto:hege@example.com">Privacy Policy</a></p>
+                        <p><a href="mailto:hege@example.com">Terms of use</a></p>
+                        <p><a href="mailto:hege@example.com">Accessibility</a></p>
+                  </li>
+                  
+                  <p class="copyright">Copyright &copy; <script>document.write(new Date().getFullYear())</script>, Southern Alberta Institute of Technology</p>
+                </ul>
+            </footer>
+        </section>
+
+        <script src="script.js" defer></script>
+    </body>
+</html>
