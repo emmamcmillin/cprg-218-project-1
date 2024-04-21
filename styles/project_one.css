@@ -246,6 +246,7 @@
     outline: none;
     transition: 0.4s;
     font-size: 20px;
+    margin-bottom: 1px;
 }
 
 .accordion:first-of-type {
@@ -284,6 +285,10 @@
 }
 .active:after {
     content: "\2212"; /* Unicode character for "minus" sign (-) */
+}
+
+.accordion:focus{
+    outline: 3px solid #000000;
 }
 
 /* Media query for phone sizes */
